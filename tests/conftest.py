@@ -4,7 +4,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 import pytest
 
 
-@pytest.fixture(params=['Firefox'], scope='class')
+@pytest.fixture(params=['Firefox', 'Google'], scope='class')
 def init_driver(request):
     if request.param == 'Chrome':
         web_driver = webdriver.Chrome(ChromeDriverManager().install())
